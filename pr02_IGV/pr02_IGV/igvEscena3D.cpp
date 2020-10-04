@@ -64,20 +64,7 @@ void igvEscena3D::renderEscenaA() {
 	// Practica 2a. Parte A.
 	glMaterialfv(GL_FRONT, GL_EMISSION, color_pieza);
 
-	//Caja de zapatos.
-	glPushMatrix();
-		glScalef(1, 1, 2);
-		glutSolidCube(1);
-	glPopMatrix();
-
-	//Tapadera de caja de zapatos.
-	glPushMatrix();
-		glTranslatef(0, 0.4, 0);
-		//Para tener 0.1 de diferencia en las partes correspondientes a los ejes "x" y "z", añado 0.1 para cada lado
-		//Es decir, 0.2 de más para los ejes "x" y "z".
-		glScalef(1.2, 0.2, 2.2);
-		glutSolidCube(1);
-	glPopMatrix();
+	creaCajaZapatos();
 }
 
 void igvEscena3D::renderEscenaB() {
@@ -86,9 +73,16 @@ void igvEscena3D::renderEscenaB() {
 	// Practica 2a. Parte B.
 	glMaterialfv(GL_FRONT, GL_EMISSION, color_pieza);
 
-	glPushMatrix();
-	glutSolidCube(1);
-	glPopMatrix();
+	int numCajas = 5;
+
+	for (int i = 0; i < numCajas; i++)
+	{
+		glPushMatrix();
+			glTranslatef(0, i , 0);
+			creaCajaZapatos();
+		glPopMatrix();
+	}
+
 }
 
 
@@ -104,5 +98,21 @@ void igvEscena3D::renderEscenaC() {
 }
 
 
+void igvEscena3D::creaCajaZapatos() {
+	//Caja de zapatos.
+	glPushMatrix();
+	glScalef(1, 1, 2);
+	glutSolidCube(1);
+	glPopMatrix();
 
+	/*Tapadera de caja de zapatos:
+		Para tener 0.1 de diferencia en las partes correspondientes a los ejes "x", "y" y "z", añado 0.1 para cada lado
+		Es decir, 0.2 de más para los ejes "x" y "z". El escalado en "y" de 0.2 para que sobresalga también 0.1 al haberlo
+		trasladado 0.4 desde el origen.*/
+	glPushMatrix();
+		glTranslatef(0, 0.4, 0);
+		glScalef(1.2, 0.2, 2.2);
+		glutSolidCube(1);
+	glPopMatrix();
+}
 

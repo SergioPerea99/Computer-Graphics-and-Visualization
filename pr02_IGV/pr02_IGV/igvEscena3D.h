@@ -42,6 +42,8 @@ class igvEscena3D {
         void renderEscenaB();
 		void renderEscenaC();
 
+		void creaCajaZapatos();
+
 };
 
 #endif
