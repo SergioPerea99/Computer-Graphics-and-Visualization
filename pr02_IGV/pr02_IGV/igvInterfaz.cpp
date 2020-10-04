@@ -59,6 +59,24 @@ void igvInterfaz::set_glutKeyboardFunc(unsigned char key, int x, int y) {
 	case 'E': // activa/desactiva la visualizacion de los ejes
 		interfaz.escena.set_ejes(interfaz.escena.get_ejes() ? false : true);
 		break;
+	case 'x': // añade una replica de el/los objeto/s "Caja de zapatos" a partir del desplazamiento en el eje x en +1.
+		interfaz.escena.incrementar_tamX(1);
+		break;
+	case 'X': // añade una replica de el/los objeto/s "Caja de zapatos" a partir del desplazamiento en el eje x en +1.
+		interfaz.escena.decrementar_tamX(1);
+		break;
+	case 'y': // añade una replica de el/los objeto/s "Caja de zapatos" a partir del desplazamiento en el eje y en +1.
+		interfaz.escena.incrementar_tamY(1);
+		break;
+	case 'Y': // añade una replica de el/los objeto/s "Caja de zapatos" a partir del desplazamiento en el eje y en +1.
+		interfaz.escena.decrementar_tamY(1);
+		break;
+	case 'z': // añade una replica de el/los objeto/s "Caja de zapatos" a partir del desplazamiento en el eje z en +1.
+		interfaz.escena.incrementar_tamZ(1);
+		break;
+	case 'Z': // añade una replica de el/los objeto/s "Caja de zapatos" a partir del desplazamiento en el eje z en +1.
+		interfaz.escena.decrementar_tamZ(1);
+		break;
 	case 27: // tecla de escape para SALIR
 		exit(1);
 		break;

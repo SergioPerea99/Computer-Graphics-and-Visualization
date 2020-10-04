@@ -1,8 +1,11 @@
 ﻿  igvEscena3D.cpp
-C:\Codigo\INFORMÁTICA GRÁFICA Y VISUALIZACIÓN\IGV_PR\pr02_IGV\pr02_IGV\igvEscena3D.cpp(82,20): warning C4244: 'argumento': conversión de 'int' a 'GLfloat'; posible pérdida de datos
-C:\Codigo\INFORMÁTICA GRÁFICA Y VISUALIZACIÓN\IGV_PR\pr02_IGV\pr02_IGV\igvEscena3D.cpp(105,32): warning C4244: 'argumento': conversión de 'double' a 'GLfloat'; posible pérdida de datos
-C:\Codigo\INFORMÁTICA GRÁFICA Y VISUALIZACIÓN\IGV_PR\pr02_IGV\pr02_IGV\igvEscena3D.cpp(105,27): warning C4244: 'argumento': conversión de 'int' a 'GLfloat'; posible pérdida de datos
-C:\Codigo\INFORMÁTICA GRÁFICA Y VISUALIZACIÓN\IGV_PR\pr02_IGV\pr02_IGV\igvEscena3D.cpp(105,20): warning C4244: 'argumento': conversión de 'double' a 'GLfloat'; posible pérdida de datos
-C:\Codigo\INFORMÁTICA GRÁFICA Y VISUALIZACIÓN\IGV_PR\pr02_IGV\pr02_IGV\igvEscena3D.cpp(126,25): warning C4305: 'argumento': truncamiento de 'double' a 'GLfloat'
-C:\Codigo\INFORMÁTICA GRÁFICA Y VISUALIZACIÓN\IGV_PR\pr02_IGV\pr02_IGV\igvEscena3D.cpp(127,25): warning C4305: 'argumento': truncamiento de 'double' a 'GLfloat'
+C:\Codigo\INFORMÁTICA GRÁFICA Y VISUALIZACIÓN\IGV_PR\pr02_IGV\pr02_IGV\igvEscena3D.cpp(81,20): warning C4244: 'argumento': conversión de 'int' a 'GLfloat'; posible pérdida de datos
+C:\Codigo\INFORMÁTICA GRÁFICA Y VISUALIZACIÓN\IGV_PR\pr02_IGV\pr02_IGV\igvEscena3D.cpp(103,32): warning C4244: 'argumento': conversión de 'double' a 'GLfloat'; posible pérdida de datos
+C:\Codigo\INFORMÁTICA GRÁFICA Y VISUALIZACIÓN\IGV_PR\pr02_IGV\pr02_IGV\igvEscena3D.cpp(103,27): warning C4244: 'argumento': conversión de 'int' a 'GLfloat'; posible pérdida de datos
+C:\Codigo\INFORMÁTICA GRÁFICA Y VISUALIZACIÓN\IGV_PR\pr02_IGV\pr02_IGV\igvEscena3D.cpp(103,20): warning C4244: 'argumento': conversión de 'double' a 'GLfloat'; posible pérdida de datos
+C:\Codigo\INFORMÁTICA GRÁFICA Y VISUALIZACIÓN\IGV_PR\pr02_IGV\pr02_IGV\igvEscena3D.cpp(124,25): warning C4305: 'argumento': truncamiento de 'double' a 'GLfloat'
+C:\Codigo\INFORMÁTICA GRÁFICA Y VISUALIZACIÓN\IGV_PR\pr02_IGV\pr02_IGV\igvEscena3D.cpp(125,25): warning C4305: 'argumento': truncamiento de 'double' a 'GLfloat'
+  igvInterfaz.cpp
+  pr2a.cpp
+  Generando código...
   pr02_IGV.vcxproj -> C:\Codigo\INFORMÁTICA GRÁFICA Y VISUALIZACIÓN\IGV_PR\pr02_IGV\Debug\pr02_IGV.exe

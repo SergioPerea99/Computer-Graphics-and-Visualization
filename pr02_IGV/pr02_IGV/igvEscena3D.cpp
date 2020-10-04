@@ -74,9 +74,8 @@ void igvEscena3D::renderEscenaB() {
 	// Practica 2a. Parte B.
 	glMaterialfv(GL_FRONT, GL_EMISSION, color_pieza);
 
-	int numCajas = 3;
 
-	for (int i = 0; i < numCajas; i++)
+	for (int i = 0; i < get_tamY()+1; i++)
 	{
 		glPushMatrix();
 			glTranslatef(0, i , 0);
@@ -93,13 +92,12 @@ void igvEscena3D::renderEscenaC() {
 	// Practica 2a. Parte C.
 	glMaterialfv(GL_FRONT, GL_EMISSION, color_pieza);
 
-	int numCajas = 3;
 
-	for (int x = 0; x < numCajas; x++)
+	for (int x = 0; x < get_tamX()+1; x++)
 	{
-		for (int z = 0; z < numCajas; z++)
+		for (int z = 0; z < get_tamZ()+1; z++)
 		{
-			for (int y = 0; y < numCajas; y++)
+			for (int y = 0; y < get_tamY()+1; y++)
 			{
 				glPushMatrix();
 				glTranslatef(x * 1.4, y, z * 2.4);
@@ -120,8 +118,8 @@ void igvEscena3D::creaCajaZapatos() {
 
 	/*Tapadera de caja de zapatos:
 		Para tener 0.1 de diferencia en las partes correspondientes a los ejes "x", "y" y "z", añado 0.1 para cada lado
-		Es decir, 0.2 de más para los ejes "x" y "z". El escalado en "y" de 0.2 para que sobresalga también 0.1 al haberlo
-		trasladado 0.4 desde el origen.*/
+		Es decir, 0.2 de más para los ejes "x" y "z". El escalado en "y" de 0.2 para que NO sobresalga  al haberlo
+		trasladado 0.4  (0.4+0.1 = 0.5, posición del borde del cubo) desde el origen.*/
 	glPushMatrix();
 		glTranslatef(0, 0.4, 0);
 		glScalef(1.2, 0.2, 2.2);

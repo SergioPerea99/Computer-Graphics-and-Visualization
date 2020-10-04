@@ -24,6 +24,10 @@ class igvEscena3D {
 		bool ejes;
         // Declarar variables para manejar las transformaciones para la escena B
 
+		//Necesito crear estos atributos para poder realizar el final de la práctica: ejercicio C.
+		unsigned int tamX = 0;
+		unsigned int tamY = 0;
+		unsigned int tamZ = 0;
 
 	public:
 		// Constructores por defecto y destructor
@@ -36,6 +40,18 @@ class igvEscena3D {
 
 		bool get_ejes() {return ejes;};
 		void set_ejes(bool _ejes){ejes = _ejes;};
+
+		int get_tamX() { return tamX; };
+		void incrementar_tamX(int _tamX) { tamX += _tamX; };
+		void decrementar_tamX(int _tamX) { tamX -= _tamX; };
+
+		int get_tamY() { return tamY; };
+		void incrementar_tamY(int _tamY) { tamY += _tamY; };
+		void decrementar_tamY(int _tamY) { tamY -= _tamY; };
+
+		int get_tamZ() { return tamZ; };
+		void incrementar_tamZ(int _tamZ) { tamZ += _tamZ; };
+		void decrementar_tamZ(int _tamZ) { tamZ -= _tamZ; };
 
     protected:
         void renderEscenaA();
