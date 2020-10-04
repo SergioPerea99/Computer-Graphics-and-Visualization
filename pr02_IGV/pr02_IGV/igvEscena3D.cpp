@@ -64,8 +64,19 @@ void igvEscena3D::renderEscenaA() {
 	// Practica 2a. Parte A.
 	glMaterialfv(GL_FRONT, GL_EMISSION, color_pieza);
 
+	//Caja de zapatos.
 	glPushMatrix();
-	glutSolidCube(1);
+		glScalef(1, 1, 2);
+		glutSolidCube(1);
+	glPopMatrix();
+
+	//Tapadera de caja de zapatos.
+	glPushMatrix();
+		glTranslatef(0, 0.4, 0);
+		//Para tener 0.1 de diferencia en las partes correspondientes a los ejes "x" y "z", añado 0.1 para cada lado
+		//Es decir, 0.2 de más para los ejes "x" y "z".
+		glScalef(1.2, 0.2, 2.2);
+		glutSolidCube(1);
 	glPopMatrix();
 }
 
