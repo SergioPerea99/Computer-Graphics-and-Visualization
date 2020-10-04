@@ -2,6 +2,7 @@
 #include <stdio.h>
 
 #include "igvEscena3D.h"
+#include "igvInterfaz.h"
 
 // Metodos constructores -----------------------------------
 
@@ -73,7 +74,7 @@ void igvEscena3D::renderEscenaB() {
 	// Practica 2a. Parte B.
 	glMaterialfv(GL_FRONT, GL_EMISSION, color_pieza);
 
-	int numCajas = 5;
+	int numCajas = 3;
 
 	for (int i = 0; i < numCajas; i++)
 	{
@@ -92,9 +93,21 @@ void igvEscena3D::renderEscenaC() {
 	// Practica 2a. Parte C.
 	glMaterialfv(GL_FRONT, GL_EMISSION, color_pieza);
 
-	glPushMatrix();
-	glutSolidCube(1);
-	glPopMatrix();
+	int numCajas = 3;
+
+	for (int x = 0; x < numCajas; x++)
+	{
+		for (int z = 0; z < numCajas; z++)
+		{
+			for (int y = 0; y < numCajas; y++)
+			{
+				glPushMatrix();
+				glTranslatef(x * 1.4, y, z * 2.4);
+				creaCajaZapatos();
+				glPopMatrix();
+			}
+		}
+	}
 }
 
 
