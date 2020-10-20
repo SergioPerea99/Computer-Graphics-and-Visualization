@@ -63,10 +63,22 @@ void igvInterfaz::set_glutKeyboardFunc(unsigned char key, int x, int y) {
 
 	switch (key) {
 	case 'p': // cambia el tipo de proyección de paralela a perspectiva y viceversa
-		
+		if (interfaz.camara.tipo == IGV_PARALELA) {
+			interfaz.camara.tipo = IGV_PERSPECTIVA;
+		}
+		else {
+			interfaz.camara.tipo = IGV_PARALELA;
+		}
+		interfaz.camara.aplicar();
 		break;
 	case 'P': // cambia el tipo de proyección de paralela a perspectiva y viceversa
-		
+		if (interfaz.camara.tipo == IGV_PARALELA) {
+			interfaz.camara.tipo = IGV_PERSPECTIVA;
+		}
+		else {
+			interfaz.camara.tipo = IGV_PARALELA;
+		}
+		interfaz.camara.aplicar();
 		break;
 	case 'v': // cambia la posición de la cámara para mostrar las vistas planta, perfil, alzado o perspectiva
 
