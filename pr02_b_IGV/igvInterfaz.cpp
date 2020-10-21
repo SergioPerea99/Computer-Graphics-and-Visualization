@@ -66,66 +66,22 @@ void igvInterfaz::set_glutKeyboardFunc(unsigned char key, int x, int y) {
 
 	switch (key) {
 	case 'p': // cambia el tipo de proyección de paralela a perspectiva y viceversa
-		if (interfaz.camara.tipo == IGV_PARALELA) {
+		if (interfaz.camara.tipo == IGV_PARALELA)
 			interfaz.camara.tipo = IGV_PERSPECTIVA;
-		}
-		else {
+		else
 			interfaz.camara.tipo = IGV_PARALELA;
-		}
-		
 		break;
 	case 'P': // cambia el tipo de proyección de paralela a perspectiva y viceversa
-		if (interfaz.camara.tipo == IGV_PARALELA) {
+		if (interfaz.camara.tipo == IGV_PARALELA)
 			interfaz.camara.tipo = IGV_PERSPECTIVA;
-		}
-		else {
+		else
 			interfaz.camara.tipo = IGV_PARALELA;
-		}
-		
 		break;
 	case 'v': // cambia la posición de la cámara para mostrar las vistas planta, perfil, alzado o perspectiva
-		if (interfaz.visualizacion == 1) {
-			interfaz.camara.V.set(1, 0, 0);
-			interfaz.camara.P0.set(0,5,0);
-			interfaz.set_visualizacion(2);
-		}
-		else if (interfaz.visualizacion == 2) {
-			interfaz.camara.V.set(0, 1, 0);
-			interfaz.camara.P0.set(5, 0, 0);
-			interfaz.set_visualizacion(3);
-		}
-		else if (interfaz.visualizacion == 3) {
-			interfaz.camara.V.set(0, 1, 0);
-			interfaz.camara.P0.set(0, 0, 5);
-			interfaz.set_visualizacion(4);
-		}
-		else if (interfaz.visualizacion == 4) {
-			interfaz.camara.V.set(0, 1, 0);
-			interfaz.camara.P0.set(3, 2, 4);
-			interfaz.set_visualizacion(1);
-		}
+		interfaz.cambiarVista();
 		break;
 	case 'V': // cambia la posición de la cámara para mostrar las vistas planta, perfil, alzado o perspectiva
-		if (interfaz.visualizacion == 1) {
-			interfaz.camara.V.set(1, 0, 0);
-			interfaz.camara.P0.set(0, 5, 0);
-			interfaz.set_visualizacion(2);
-		}
-		else if (interfaz.visualizacion == 2) {
-			interfaz.camara.V.set(0, 1, 0);
-			interfaz.camara.P0.set(5, 0, 0);
-			interfaz.set_visualizacion(3);
-		}
-		else if (interfaz.visualizacion == 3) {
-			interfaz.camara.V.set(0, 1, 0);
-			interfaz.camara.P0.set(0, 0, 5);
-			interfaz.set_visualizacion(4);
-		}
-		else if (interfaz.visualizacion == 4) {
-			interfaz.camara.V.set(0, 1, 0);
-			interfaz.camara.P0.set(3, 2, 4);
-			interfaz.set_visualizacion(1);
-		}
+		interfaz.cambiarVista();
 		break;
 	case '+': // zoom in
 		interfaz.camara.zoom(0.95);
@@ -135,11 +91,9 @@ void igvInterfaz::set_glutKeyboardFunc(unsigned char key, int x, int y) {
 		break;
 	case 'n': // incrementar la distancia del plano cercano
 		interfaz.camara.znear -= 0.2;
-		//interfaz.camara.zfar += 0.2;
 		break;
 	case 'N': // decrementar la distancia del plano cercano
 		interfaz.camara.znear += 0.2;
-		//interfaz.camara.zfar += 0.1;
 		break;
 	case '4': // dividir la ventana  en cuatro vistas
 
@@ -186,4 +140,27 @@ void igvInterfaz::inicializa_callbacks() {
 
 void igvInterfaz::set_visualizacion(int _visualizacion) {
 	visualizacion = _visualizacion;
+}
+
+void igvInterfaz::cambiarVista() {
+	if (interfaz.visualizacion == 1) {
+		interfaz.camara.V.set(1, 0, 0);
+		interfaz.camara.P0.set(0, 5, 0);
+		interfaz.set_visualizacion(2);
+	}
+	else if (interfaz.visualizacion == 2) {
+		interfaz.camara.V.set(0, 1, 0);
+		interfaz.camara.P0.set(5, 0, 0);
+		interfaz.set_visualizacion(3);
+	}
+	else if (interfaz.visualizacion == 3) {
+		interfaz.camara.V.set(0, 1, 0);
+		interfaz.camara.P0.set(0, 0, 5);
+		interfaz.set_visualizacion(4);
+	}
+	else if (interfaz.visualizacion == 4) {
+		interfaz.camara.V.set(0, 1, 0);
+		interfaz.camara.P0.set(3, 2, 4);
+		interfaz.set_visualizacion(1);
+	}
 }

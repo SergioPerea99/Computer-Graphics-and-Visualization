@@ -67,6 +67,7 @@ public:
 
 	//Métodos añadidos para la práctica 2b.
 	void set_visualizacion(int _visualizacion);
+	void cambiarVista();
 };
 
 #endif
