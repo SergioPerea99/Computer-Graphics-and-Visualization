@@ -135,16 +135,28 @@ void igvInterfaz::set_glutDisplayFunc() {
 	}
 	else {
 		// se establece los  4 viewport.
-		glViewport(0, interfaz.get_ancho_ventana() / interfaz.divisiones, interfaz.get_ancho_ventana()/interfaz.divisiones, interfaz.get_alto_ventana()/interfaz.divisiones);
+		//ARRIBA IZQUIERDA
+		glViewport(0, interfaz.get_alto_ventana() / interfaz.divisiones, interfaz.get_ancho_ventana()/interfaz.divisiones, interfaz.get_alto_ventana()/interfaz.divisiones);
+		interfaz.camara.set(igvPunto3D(3, 2, 4), igvPunto3D(0, 0, 0), igvPunto3D(0, 1, 0));
+		interfaz.camara.aplicar();
 		interfaz.escena.visualizar();
 
-		glViewport(0, 0, interfaz.get_ancho_ventana() / interfaz.divisiones, interfaz.get_alto_ventana() / interfaz.divisiones);
+		//ABAJO IZQUIERDA
+		glViewport(0,0, interfaz.get_ancho_ventana() / interfaz.divisiones, interfaz.get_alto_ventana() / interfaz.divisiones);
+		interfaz.camara.set(igvPunto3D(5, 0, 0), igvPunto3D(0, 0, 0), igvPunto3D(0, 1, 0));
+		interfaz.camara.aplicar();
 		interfaz.escena.visualizar();
 
-		glViewport(interfaz.get_alto_ventana() / interfaz.divisiones, 0, interfaz.get_ancho_ventana() / interfaz.divisiones, interfaz.get_alto_ventana() / interfaz.divisiones);
+		//ARRIBA DERECHA
+		glViewport(interfaz.get_ancho_ventana() / interfaz.divisiones, interfaz.get_alto_ventana() / interfaz.divisiones, interfaz.get_ancho_ventana() / interfaz.divisiones, interfaz.get_alto_ventana() / interfaz.divisiones);
+		interfaz.camara.set(igvPunto3D(0, 5, 0), igvPunto3D(0, 0, 0), igvPunto3D(1, 0, 0));
+		interfaz.camara.aplicar();
 		interfaz.escena.visualizar();
 
-		glViewport(interfaz.get_alto_ventana() / interfaz.divisiones, interfaz.get_ancho_ventana() / interfaz.divisiones, interfaz.get_ancho_ventana() / interfaz.divisiones, interfaz.get_alto_ventana() / interfaz.divisiones);
+		//ABAJO DERECHA
+		glViewport(interfaz.get_ancho_ventana() / interfaz.divisiones, 0, interfaz.get_ancho_ventana() / interfaz.divisiones, interfaz.get_alto_ventana() / interfaz.divisiones);
+		interfaz.camara.set(igvPunto3D(0, 0, 5), igvPunto3D(0, 0, 0), igvPunto3D(0, 1, 0));
+		interfaz.camara.aplicar();
 		interfaz.escena.visualizar();
 	}
 
