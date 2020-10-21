@@ -28,6 +28,9 @@ protected:
 	// Valores de la vista panorámica
 	igvPunto3D p0, r, V;
 
+	//Atributo extra para el control de la visualización.
+	int visualizacion; //Añadido aquí para evitar tener que cambiar mucho el código base de la cámara.
+
 public:
 	// Constructores por defecto y destructor
 	igvInterfaz();
@@ -61,6 +64,9 @@ public:
 
 	void set_ancho_ventana(int _ancho_ventana) { ancho_ventana = _ancho_ventana; };
 	void set_alto_ventana(int _alto_ventana) { alto_ventana = _alto_ventana; };
+
+	//Métodos añadidos para la práctica 2b.
+	void set_visualizacion(int _visualizacion);
 };
 
 #endif
