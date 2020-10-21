@@ -128,10 +128,10 @@ void igvInterfaz::set_glutKeyboardFunc(unsigned char key, int x, int y) {
 		}
 		break;
 	case '+': // zoom in
-
+		interfaz.camara.zoom(0.95);
 		break;
 	case '-': // zoom out
-
+		interfaz.camara.zoom(1.05);
 		break;
 	case 'n': // incrementar la distancia del plano cercano
 

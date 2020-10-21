@@ -1,3 +1,3 @@
-﻿  igvInterfaz.cpp
+﻿  igvCamara.cpp
 C:\Codigo\INFORMÁTICA GRÁFICA Y VISUALIZACIÓN\IGV_PR\pr02_b_IGV\igvPunto3D.h(26,2): warning C4091: 'typedef ': se ha omitido a la izquierda de '<unnamed-enum-X>' cuando no hay ninguna variable declarada
   pr02_b_IGV.vcxproj -> C:\Codigo\INFORMÁTICA GRÁFICA Y VISUALIZACIÓN\IGV_PR\pr02_b_IGV\Debug\pr02_b_IGV.exe

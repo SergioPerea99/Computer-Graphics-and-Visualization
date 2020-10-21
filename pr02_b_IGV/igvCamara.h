@@ -43,7 +43,7 @@ public:
 	igvPunto3D V;
 
 	// Metodos
-
+	
 public:
 	// Constructores por defecto y destructor
 	igvCamara();

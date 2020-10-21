@@ -74,5 +74,15 @@ void igvCamara::aplicar(void) {
 }
 
 void igvCamara::zoom(double factor) {
+	if (angulo*factor > 0 && angulo*factor < 180) {
+		//ACTUALIZACION DE VALORES PARA PROYECCION EN PARALELO.
+		xwmin *= factor;
+		xwmax *= factor;
 
+		ywmin *= factor;
+		ywmax *= factor;
+
+		//ACTUALIZACION DE VALORES PARA PROYECCION EN PERSPECTIVA.
+		angulo *= factor;
+	}
 }
