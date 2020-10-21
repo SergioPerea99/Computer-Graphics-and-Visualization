@@ -134,10 +134,12 @@ void igvInterfaz::set_glutKeyboardFunc(unsigned char key, int x, int y) {
 		interfaz.camara.zoom(1.05);
 		break;
 	case 'n': // incrementar la distancia del plano cercano
-
+		interfaz.camara.znear -= 0.2;
+		//interfaz.camara.zfar += 0.2;
 		break;
 	case 'N': // decrementar la distancia del plano cercano
-
+		interfaz.camara.znear += 0.2;
+		//interfaz.camara.zfar += 0.1;
 		break;
 	case '4': // dividir la ventana  en cuatro vistas
 
