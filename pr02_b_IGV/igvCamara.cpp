@@ -74,6 +74,7 @@ void igvCamara::aplicar(void) {
 }
 
 void igvCamara::zoom(double factor) {
+	//Lo hago a la misma vez para que cuando cambiemos de proyección se haya incrementado/decrementado el mismo zoom para ambas proyecciones.
 	if (angulo*factor > 0 && angulo*factor < 180) {
 		//ACTUALIZACION DE VALORES PARA PROYECCION EN PARALELO.
 		xwmin *= factor;

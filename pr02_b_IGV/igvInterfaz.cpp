@@ -97,10 +97,10 @@ void igvInterfaz::set_glutKeyboardFunc(unsigned char key, int x, int y) {
 		interfaz.camara.znear += 0.2;
 		break;
 	case '4': // dividir la ventana  en cuatro vistas
-		if (interfaz.divisiones == 0)
-			interfaz.divisiones = 2;
+		if (interfaz.get_divisiones() == 0)
+			interfaz.set_divisiones(2);
 		else
-			interfaz.divisiones = 0;
+			interfaz.set_divisiones(0);
 		break;
 	case 'e': // activa/desactiva la visualizacion de los ejes
 		interfaz.escena.set_ejes(interfaz.escena.get_ejes() ? false : true);
@@ -129,7 +129,7 @@ void igvInterfaz::set_glutDisplayFunc() {
 	if (interfaz.divisiones == 0) {
 		// se establece el viewport
 		glViewport(0, 0, interfaz.get_ancho_ventana(), interfaz.get_alto_ventana());
-
+		
 		//visualiza la escena
 		interfaz.escena.visualizar();
 	}
@@ -158,6 +158,10 @@ void igvInterfaz::set_glutDisplayFunc() {
 		interfaz.camara.set(igvPunto3D(0, 0, 5), igvPunto3D(0, 0, 0), igvPunto3D(0, 1, 0));
 		interfaz.camara.aplicar();
 		interfaz.escena.visualizar();
+
+		//REINICIO DE LOS DATOS PARA POSIBLE CAMBIO DE VIEWPORT AL MISMO INICIAL.
+		interfaz.camara.set(igvPunto3D(3, 2, 4), igvPunto3D(0, 0, 0), igvPunto3D(0, 1, 0));
+		interfaz.camara.aplicar();
 	}
 
 	// refresca la ventana
@@ -174,25 +178,42 @@ void igvInterfaz::set_visualizacion(int _visualizacion) {
 	visualizacion = _visualizacion;
 }
 
+int igvInterfaz::get_visualizacion() const{
+	return visualizacion;
+}
+
+void igvInterfaz::set_divisiones(int _divisiones) {
+	divisiones = _divisiones;
+}
+
+int igvInterfaz::get_divisiones() const {
+	return divisiones;
+}
+
 void igvInterfaz::cambiarVista() {
-	if (interfaz.visualizacion == 1) {
+	switch (interfaz.get_visualizacion()) {
+	case 1:
 		interfaz.camara.V.set(1, 0, 0);
 		interfaz.camara.P0.set(0, 5, 0);
 		interfaz.set_visualizacion(2);
-	}
-	else if (interfaz.visualizacion == 2) {
+		break;
+	case 2:
 		interfaz.camara.V.set(0, 1, 0);
 		interfaz.camara.P0.set(5, 0, 0);
 		interfaz.set_visualizacion(3);
-	}
-	else if (interfaz.visualizacion == 3) {
+		break;
+	case 3:
 		interfaz.camara.V.set(0, 1, 0);
 		interfaz.camara.P0.set(0, 0, 5);
 		interfaz.set_visualizacion(4);
-	}
-	else if (interfaz.visualizacion == 4) {
+		break;
+	case 4:
 		interfaz.camara.V.set(0, 1, 0);
 		interfaz.camara.P0.set(3, 2, 4);
 		interfaz.set_visualizacion(1);
+		break;
+	default:
+		break;
 	}
+	
 }

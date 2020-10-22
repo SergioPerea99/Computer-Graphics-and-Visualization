@@ -68,6 +68,11 @@ public:
 
 	//Métodos añadidos para la práctica 2b.
 	void set_visualizacion(int _visualizacion);
+	int get_visualizacion() const;
+
+	void set_divisiones(int _divisiones);
+	int get_divisiones() const;
+
 	void cambiarVista();
 };
 
