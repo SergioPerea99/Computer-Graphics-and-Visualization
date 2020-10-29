@@ -10,7 +10,7 @@
 
 igvEscena3D::igvEscena3D() {
 	ejes = true;
-
+	rot_X = rot_Y = rot_Z = 0;
 	// Apartado B: Inserta el código para crear un cilindro
 	malla = new igvMallaTriangulos();
 }
@@ -67,7 +67,13 @@ void igvEscena3D::visualizar(void) {
 
 	// Apartado B: la siguiente llamada hay que sustituirla por la llamada al método visualizar de la malla
 	GLUquadric* cyl = gluNewQuadric();
-	gluCylinder(cyl, 1, 1, 1, 20, 5);
+
+	glRotatef(get_rotX(), 1, 0, 0); //MANEJO DE ROTACION SOBRE EJE X.
+	glRotatef(get_rotY(),0,1,0); //MANEJO DE ROTACION SOBRE EJE Y.
+	glRotatef(get_rotZ(), 0, 0, 1); //MANEJO DE ROTACION SOBRE EJE Z.
+
+	gluCylinder(cyl, 1, 1 , 1, 20, 5);
+	
 	gluDeleteQuadric(cyl);
 	cyl=nullptr;
 	
@@ -75,3 +81,26 @@ void igvEscena3D::visualizar(void) {
 	glPopMatrix(); // restaura la matriz de modelado
 }
 
+void igvEscena3D::set_rotX(float _rotX) {
+	rot_X = _rotX;
+}
+
+void igvEscena3D::set_rotY(float _rotY) {
+	rot_Y = _rotY;
+}
+
+void igvEscena3D::set_rotZ(float _rotZ) {
+	rot_Z = _rotZ;
+}
+
+float igvEscena3D::get_rotX() const {
+	return rot_X;
+}
+
+float igvEscena3D::get_rotY() const {
+	return rot_Y;
+}
+
+float igvEscena3D::get_rotZ() const {
+	return rot_Z;
+}

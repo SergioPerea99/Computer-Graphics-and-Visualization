@@ -52,22 +52,22 @@ void igvInterfaz::inicia_bucle_visualizacion() {
 void igvInterfaz::set_glutKeyboardFunc(unsigned char key, int x, int y) {
 	switch (key) {
     case 'x': // Apartado A: rotar X positivo 
-
+		interfaz.escena.set_rotX(interfaz.escena.get_rotX() + 10);
 		break;
     case 'X': // Apartado A: rotar X negativo 
-
+		interfaz.escena.set_rotX(interfaz.escena.get_rotX() - 10);
 		break;
     case 'y': // Apartado A: rotar Y positivo 
-
+		interfaz.escena.set_rotY(interfaz.escena.get_rotY() + 10);
 		break;
     case 'Y': // Apartado A: rotar y negativo 
-
+		interfaz.escena.set_rotY(interfaz.escena.get_rotY() - 10);
 		break;
     case 'z': // Apartado A: rotar z positivo 
-
+		interfaz.escena.set_rotZ(interfaz.escena.get_rotZ() + 10);
 		break;
     case 'Z': // Apartado A: rotar Z negativo 
-
+		interfaz.escena.set_rotZ(interfaz.escena.get_rotZ() - 10);
 		break;
 		case 'e': // activa/desactiva la visualizacion de los ejes
 			interfaz.escena.set_ejes(interfaz.escena.get_ejes()?false:true);

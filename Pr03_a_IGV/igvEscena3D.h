@@ -17,6 +17,7 @@ protected:
 	bool ejes;
 
 	// Apartado A: Añadir aquí los atributos con los ángulos de rotación en X, Y y Z.
+	float rot_X, rot_Y, rot_Z;
 
 public:
 	// atributos públicos
@@ -34,8 +35,13 @@ public:
 	void set_ejes(bool _ejes) { ejes = _ejes; };
 
 	// Apartado A: métodos para incrementar los ángulos
+	void set_rotX(float _rotX);
+	void set_rotY(float _rotY);
+	void set_rotZ(float _rotZ);
 	// Apartado A: métodos para obtener los valores de los ángulos
-
+	float get_rotX() const;
+	float get_rotY() const;
+	float get_rotZ() const;
 };
 
 #endif
