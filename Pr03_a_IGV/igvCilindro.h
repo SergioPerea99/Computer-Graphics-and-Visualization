@@ -1,6 +1,6 @@
 
 #include "igvMallaTriangulos.h"
-
+constexpr auto PI = 3.141592;
 class igvCilindro : public igvMallaTriangulos {
 
 

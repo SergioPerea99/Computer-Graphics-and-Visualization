@@ -41,6 +41,15 @@ void igvMallaTriangulos::visualizar(void) {
 	glShadeModel(GL_FLAT);
 
 	/* Apartado B: TODO */
+	glEnableClientState(GL_VERTEX_ARRAY); /*Activar la utilización de arrays de vértices.*/
+	glVertexPointer(3, GL_FLOAT, 0, vertices);
+	double aux = 0, aux2 = 0;
+	for (int i = 0; i < num_vertices*3; i++)
+		aux = vertices[i];
+	for (int i = 0; i < num_triangulos*3; i++)
+		aux2 = triangulos[i];
 
+	glDrawElements(GL_TRIANGLES, num_triangulos, GL_UNSIGNED_INT, triangulos);
+	glDisableClientState(GL_VERTEX_ARRAY);
 }
 

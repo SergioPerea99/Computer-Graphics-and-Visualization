@@ -4,6 +4,7 @@
 
 #include "igvEscena3D.h"
 #include "igvMallaTriangulos.h"
+#include "igvCilindro.h"
 
 
 // Metodos constructores 
@@ -66,16 +67,18 @@ void igvEscena3D::visualizar(void) {
 	
 
 	// Apartado B: la siguiente llamada hay que sustituirla por la llamada al método visualizar de la malla
-	GLUquadric* cyl = gluNewQuadric();
+	//GLUquadric* cyl = gluNewQuadric();
+	igvCilindro cilindro(1,1,40,2);
+	cilindro.visualizar();
 
 	glRotatef(get_rotX(), 1, 0, 0); //MANEJO DE ROTACION SOBRE EJE X.
 	glRotatef(get_rotY(),0,1,0); //MANEJO DE ROTACION SOBRE EJE Y.
 	glRotatef(get_rotZ(), 0, 0, 1); //MANEJO DE ROTACION SOBRE EJE Z.
 
-	gluCylinder(cyl, 1, 1 , 1, 20, 5);
+	//gluCylinder(cyl, 1, 1 , 1, 20, 5);
 	
-	gluDeleteQuadric(cyl);
-	cyl=nullptr;
+	//gluDeleteQuadric(cyl);
+	//cyl=nullptr;
 	
 
 	glPopMatrix(); // restaura la matriz de modelado
