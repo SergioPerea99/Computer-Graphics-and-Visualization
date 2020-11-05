@@ -42,21 +42,11 @@ void igvMallaTriangulos::visualizar(void) {
 
 	/* Apartado B: TODO */
 
-	/*for (int i = 0; i < num_triangulos * 3; i += 3) {
-		int vertice1 = triangulos[i] * 3;
-		int vertice2 = triangulos[i + 1] * 3;
-		int vertice3 = triangulos[i + 2] * 3;
-		glBegin(GL_TRIANGLES);
-		glVertex3f(vertices[vertice1], vertices[vertice1 + 1], vertices[vertice1 + 2]);
-		glVertex3f(vertices[vertice2], vertices[vertice2 + 1], vertices[vertice2 + 2]);
-		glVertex3f(vertices[vertice3], vertices[vertice3 + 1], vertices[vertice3 + 2]);
-		glEnd();
-	}*/
+
+
 
 	glEnableClientState(GL_VERTEX_ARRAY); /*Activar la utilización de arrays de vértices.*/
 	glVertexPointer(3, GL_FLOAT, 0, vertices);
-	
-
 	glDrawElements(GL_TRIANGLES, num_triangulos, GL_UNSIGNED_INT, triangulos);
 	glDisableClientState(GL_VERTEX_ARRAY);
 }

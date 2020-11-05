@@ -1,2 +1,5 @@
-﻿  igvMallaTriangulos.cpp
+﻿  igvCilindro.cpp
+C:\Codigo\INFORMÁTICA GRÁFICA Y VISUALIZACIÓN\IGV_PR\Pr03_a_IGV\igvCilindro.cpp(68,18): warning C4244: 'inicializando': conversión de 'double' a 'float'; posible pérdida de datos
+C:\Codigo\INFORMÁTICA GRÁFICA Y VISUALIZACIÓN\IGV_PR\Pr03_a_IGV\igvCilindro.cpp(69,33): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
+C:\Codigo\INFORMÁTICA GRÁFICA Y VISUALIZACIÓN\IGV_PR\Pr03_a_IGV\igvCilindro.cpp(71,33): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
   Pr03_a_IGV.vcxproj -> C:\Codigo\INFORMÁTICA GRÁFICA Y VISUALIZACIÓN\IGV_PR\Pr03_a_IGV\Debug\Pr03_a_IGV.exe
