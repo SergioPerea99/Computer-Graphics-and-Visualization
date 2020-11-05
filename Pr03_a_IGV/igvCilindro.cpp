@@ -24,21 +24,19 @@ igvCilindro::igvCilindro(float r, float a, int divU, int divV)
 	triangulos = new unsigned [num_triangulos * 3];
 	
 	int cont_triangulos = 0; k = 0; /*Con la i voy a controlar el numero de triangulos añadidos.*/
-	for (float altu = 0; altu < a; altu += a/divV) { /*Creación de triangulos por cada partición de altura (En esta práctica 2)*/
-		for (int j = 0; j+1 < (divU + 1); j++) {
-			/*Triangulo que empieza por el vértice superior izquierdo (relativo a un rectangulo que conecta 2 triangulos).*/
-			triangulos[k++] = (divU)+ altu + j; /*Vertice superior izquierdo*/
-			triangulos[k++] = j+ altu; /*Vertice inferior izquierdo*/
-			triangulos[k++] = (divU) + altu + j + 1; /*Vertice superior siguiente.*/
+	
+	/*Triangulo que empieza por el vértice superior izquierdo (relativo a un rectangulo que conecta 2 triangulos).*/
+	for (int j = 0; j+1 <= divU; j++) {
+		triangulos[k++] = divU + j + 1; /*Vertice superior izquierdo*/
+		triangulos[k++] = j; /*Vertice inferior izquierdo*/
+		triangulos[k++] = (divU+1) + j + 1; /*Vertice superior siguiente.*/
+	}
 
-			/*Triangulo que empieza por el vértice superior derecho (relativo a un rectangulo que conecta 2 triangulos).*/
-			triangulos[k++] = (divU)+altu + j + 1; /*Vertice superior derecho*/
-			triangulos[k++] = j+altu; /*Vertice inferior izquierdo*/
-			triangulos[k++] = j + altu + 1; /*Vertice inferior siguiente.*/
-
-			/*2 triangulos añadidos, entonces:*/
-			cont_triangulos += 2;
-		}
+	/*Triangulo que empieza por el vértice superior derecho (relativo a un rectangulo que conecta 2 triangulos).*/
+	for (int j = 0; j + 1 <= divU; j++) {
+		triangulos[k++] = divU + 1 + j + 1; /*Vertice superior derecho*/
+		triangulos[k++] = j; /*Vertice inferior izquierdo*/
+		triangulos[k++] = j + 1; /*Vertice inferior siguiente.*/
 	}
 	
 	
@@ -58,7 +56,9 @@ int igvCilindro::creaCircunferencia(float _altura,float r, int divU, int k) {
 		vertices[k++] = sin(radianes) * r;  aux = vertices[k - 1];
 		radianes += (2*PI)/divU;
 	}
-
+	vertices[k++] = vertices[0];
+	vertices[k++] = _altura;
+	vertices[k++] = vertices[1];
 	
 	return k;
 }

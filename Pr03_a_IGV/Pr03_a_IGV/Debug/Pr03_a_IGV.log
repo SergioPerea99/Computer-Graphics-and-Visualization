@@ -1,11 +1,2 @@
-﻿  igvCilindro.cpp
-C:\Codigo\INFORMÁTICA GRÁFICA Y VISUALIZACIÓN\IGV_PR\Pr03_a_IGV\igvCilindro.cpp(30,35): warning C4244: '=': conversión de 'float' a 'unsigned int'; posible pérdida de datos
-C:\Codigo\INFORMÁTICA GRÁFICA Y VISUALIZACIÓN\IGV_PR\Pr03_a_IGV\igvCilindro.cpp(31,23): warning C4244: '=': conversión de 'float' a 'unsigned int'; posible pérdida de datos
-C:\Codigo\INFORMÁTICA GRÁFICA Y VISUALIZACIÓN\IGV_PR\Pr03_a_IGV\igvCilindro.cpp(32,40): warning C4244: '=': conversión de 'float' a 'unsigned int'; posible pérdida de datos
-C:\Codigo\INFORMÁTICA GRÁFICA Y VISUALIZACIÓN\IGV_PR\Pr03_a_IGV\igvCilindro.cpp(35,38): warning C4244: '=': conversión de 'float' a 'unsigned int'; posible pérdida de datos
-C:\Codigo\INFORMÁTICA GRÁFICA Y VISUALIZACIÓN\IGV_PR\Pr03_a_IGV\igvCilindro.cpp(36,23): warning C4244: '=': conversión de 'float' a 'unsigned int'; posible pérdida de datos
-C:\Codigo\INFORMÁTICA GRÁFICA Y VISUALIZACIÓN\IGV_PR\Pr03_a_IGV\igvCilindro.cpp(37,31): warning C4244: '=': conversión de 'float' a 'unsigned int'; posible pérdida de datos
-C:\Codigo\INFORMÁTICA GRÁFICA Y VISUALIZACIÓN\IGV_PR\Pr03_a_IGV\igvCilindro.cpp(56,33): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
-C:\Codigo\INFORMÁTICA GRÁFICA Y VISUALIZACIÓN\IGV_PR\Pr03_a_IGV\igvCilindro.cpp(58,33): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
-C:\Codigo\INFORMÁTICA GRÁFICA Y VISUALIZACIÓN\IGV_PR\Pr03_a_IGV\igvCilindro.cpp(59,26): warning C4244: '+=': conversión de 'double' a 'float'; posible pérdida de datos
+﻿  igvEscena3D.cpp
   Pr03_a_IGV.vcxproj -> C:\Codigo\INFORMÁTICA GRÁFICA Y VISUALIZACIÓN\IGV_PR\Pr03_a_IGV\Debug\Pr03_a_IGV.exe

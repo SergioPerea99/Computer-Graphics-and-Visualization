@@ -72,7 +72,7 @@ void igvEscena3D::visualizar(void) {
 	glRotatef(get_rotY(), 0, 1, 0); //MANEJO DE ROTACION SOBRE EJE Y.
 	glRotatef(get_rotZ(), 0, 0, 1); //MANEJO DE ROTACION SOBRE EJE Z.
 	
-	igvCilindro cilindro(1,1,40,2);
+	igvCilindro cilindro(1,1,40,1);
 	cilindro.visualizar();
 
 	
