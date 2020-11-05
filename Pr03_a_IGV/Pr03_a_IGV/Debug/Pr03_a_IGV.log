@@ -1,2 +1,5 @@
-﻿  igvEscena3D.cpp
+﻿  igvCilindro.cpp
+C:\Codigo\INFORMÁTICA GRÁFICA Y VISUALIZACIÓN\IGV_PR\Pr03_a_IGV\igvCilindro.cpp(55,33): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
+C:\Codigo\INFORMÁTICA GRÁFICA Y VISUALIZACIÓN\IGV_PR\Pr03_a_IGV\igvCilindro.cpp(57,33): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
+C:\Codigo\INFORMÁTICA GRÁFICA Y VISUALIZACIÓN\IGV_PR\Pr03_a_IGV\igvCilindro.cpp(58,26): warning C4244: '+=': conversión de 'double' a 'float'; posible pérdida de datos
   Pr03_a_IGV.vcxproj -> C:\Codigo\INFORMÁTICA GRÁFICA Y VISUALIZACIÓN\IGV_PR\Pr03_a_IGV\Debug\Pr03_a_IGV.exe
