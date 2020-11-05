@@ -11,5 +11,7 @@ public:
 	igvCilindro(float r, float a, int divU, int divV);
 	~igvCilindro();
 
+private:
+	int creaCircunferencia(float _altura,float r, int divU, int k);
 };
 
