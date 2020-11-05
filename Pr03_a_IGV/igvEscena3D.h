@@ -18,6 +18,7 @@ protected:
 
 	// Apartado A: Añadir aquí los atributos con los ángulos de rotación en X, Y y Z.
 	float rot_X, rot_Y, rot_Z;
+	std::string tipo_textura;
 
 public:
 	// atributos públicos
@@ -42,6 +43,11 @@ public:
 	float get_rotX() const;
 	float get_rotY() const;
 	float get_rotZ() const;
+
+	// Apartado C: Cambio de textura en una visualización.
+	std::string getTextura() const;
+	void setTextura(std::string _textura);
+
 };
 
 #endif

@@ -25,23 +25,28 @@ igvCilindro::igvCilindro(float r, float a, int divU, int divV)
 	
 	int cont_triangulos = 0; k = 0; /*Con la i voy a controlar el numero de triangulos añadidos.*/
 	
-		/*Triangulo que empieza por el vértice superior izquierdo (relativo a un rectangulo que conecta 2 triangulos).*/
-		for (int j = 0; j <= (int)num_triangulos/2 - 1; j++) {
-			triangulos[k++] = divU + j + 1; /*Vertice superior izquierdo*/
-			triangulos[k++] = j; /*Vertice inferior izquierdo*/
-			triangulos[k++] = (divU + 1) + j + 1; /*Vertice superior siguiente.*/
-			cont_triangulos++;
-		}
+	/*Triangulo que empieza por el vértice superior izquierdo (relativo a un rectangulo que conecta 2 triangulos).*/
+	for (int j = 0; j <= (int)num_triangulos/2 - 1; j++) {
+		triangulos[k++] = divU + j + 1; /*Vertice superior izquierdo*/
+		triangulos[k++] = j; /*Vertice inferior izquierdo*/
+		triangulos[k++] = (divU + 1) + j + 1; /*Vertice superior siguiente.*/
+	}
 
-		/*Triangulo que empieza por el vértice superior derecho (relativo a un rectangulo que conecta 2 triangulos).*/
-		for (int j = 0; j <= (int)num_triangulos / 2 - 1; j++) {
-			triangulos[k++] = divU + 1 + j + 1; /*Vertice superior derecho*/
-			triangulos[k++] = j; /*Vertice inferior izquierdo*/
-			triangulos[k++] = j + 1; /*Vertice inferior siguiente.*/
-			cont_triangulos++;
-		}
+	/*Triangulo que empieza por el vértice superior derecho (relativo a un rectangulo que conecta 2 triangulos).*/
+	for (int j = 0; j <= (int)num_triangulos / 2 - 1; j++) {
+		triangulos[k++] = divU + 1 + j + 1; /*Vertice superior derecho*/
+		triangulos[k++] = j; /*Vertice inferior izquierdo*/
+		triangulos[k++] = j + 1; /*Vertice inferior siguiente.*/
+	}
 		
 	/* Apartado C: Añadir el vector de normales */
+	k = 0;
+	normales = new float[num_vertices * 3]; /*Mismo numero de normales que de vertices.*/
+	for (int i = 0; i < num_vertices; i++) {
+		normales[k++] = vertices[k];
+		normales[k++] = 0;
+		normales[k++] = vertices[k];
+	}
 }
 
 igvCilindro::~igvCilindro()

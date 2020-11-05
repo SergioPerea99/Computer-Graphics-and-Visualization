@@ -69,8 +69,23 @@ void igvInterfaz::set_glutKeyboardFunc(unsigned char key, int x, int y) {
     case 'Z': // Apartado A: rotar Z negativo 
 		interfaz.escena.set_rotZ(interfaz.escena.get_rotZ() - 10);
 		break;
-		case 'e': // activa/desactiva la visualizacion de los ejes
-			interfaz.escena.set_ejes(interfaz.escena.get_ejes()?false:true);
+
+	case 'g': //Apartado C: Cambiar la visualización.
+		if (interfaz.escena.getTextura() == "GL_FLAT")
+			interfaz.escena.setTextura("GL_SMOOTH");
+		else
+			interfaz.escena.setTextura("GL_FLAT");
+		break;
+
+	case 'G':  //Apartado C: Cambiar la visualización.
+		if (interfaz.escena.getTextura() == "GL_FLAT")
+			interfaz.escena.setTextura("GL_SMOOTH");
+		else
+			interfaz.escena.setTextura("GL_FLAT");
+		break;
+
+	case 'e': // activa/desactiva la visualizacion de los ejes
+		interfaz.escena.set_ejes(interfaz.escena.get_ejes()?false:true);
 	  break;
     case 27: // tecla de escape para SALIR
       exit(1);

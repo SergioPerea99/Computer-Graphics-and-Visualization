@@ -36,16 +36,21 @@ igvMallaTriangulos::~igvMallaTriangulos() {
 }
 
 
-void igvMallaTriangulos::visualizar(void) {
+void igvMallaTriangulos::visualizar(std::string _visualizacion) {
 
-	glShadeModel(GL_FLAT);
+	if (_visualizacion== "GL_FLAT")
+		glShadeModel(GL_FLAT);
+	else if (_visualizacion == "GL_SMOOTH")
+		glShadeModel(GL_SMOOTH);
 
 	/* Apartado B: TODO */
 
 
 	glEnableClientState(GL_VERTEX_ARRAY); /*Activar la utilización de arrays de vértices.*/
+	glEnableClientState(GL_NORMAL_ARRAY); /*Activar la utilización de arrays de normales.*/
 	glVertexPointer(3, GL_FLOAT, 0, vertices);
+	glNormalPointer(GL_FLOAT, 0, normales);
 	glDrawElements(GL_TRIANGLES, num_triangulos * 3, GL_UNSIGNED_INT, triangulos);
+	glDisableClientState(GL_NORMAL_ARRAY);
 	glDisableClientState(GL_VERTEX_ARRAY);
 }
-

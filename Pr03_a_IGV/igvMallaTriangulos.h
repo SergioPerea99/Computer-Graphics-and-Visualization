@@ -22,7 +22,6 @@ class igvMallaTriangulos {
 		long int num_triangulos; // número de triángulos de la malla de triángulos
 		unsigned int *triangulos; // array con los (num_triangulos * 3) índices a los vértices de cada triángulo
 
-
 	public:
 		// Constructor y destructor
 		
@@ -33,8 +32,7 @@ class igvMallaTriangulos {
 		~igvMallaTriangulos();
 
 		// Método con las llamadas OpenGL para visualizar la malla de triángulos
-		void visualizar();
-
+		void visualizar(std::string _visualizacion);
 
 };
 

@@ -73,7 +73,7 @@ void igvEscena3D::visualizar(void) {
 	glRotatef(get_rotZ(), 0, 0, 1); //MANEJO DE ROTACION SOBRE EJE Z.
 	
 	igvCilindro cilindro(1,1,40,2);
-	cilindro.visualizar();
+	cilindro.visualizar(getTextura());
 
 	
 
@@ -102,4 +102,12 @@ float igvEscena3D::get_rotY() const {
 
 float igvEscena3D::get_rotZ() const {
 	return rot_Z;
+}
+
+std::string igvEscena3D::getTextura() const {
+	return tipo_textura;
+}
+
+void igvEscena3D::setTextura(std::string _textura) {
+	tipo_textura = _textura;
 }
