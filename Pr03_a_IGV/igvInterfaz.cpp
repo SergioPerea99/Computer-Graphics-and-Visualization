@@ -71,17 +71,11 @@ void igvInterfaz::set_glutKeyboardFunc(unsigned char key, int x, int y) {
 		break;
 
 	case 'g': //Apartado C: Cambiar la visualización.
-		if (interfaz.escena.getTextura() == "GL_FLAT")
-			interfaz.escena.setTextura("GL_SMOOTH");
-		else
-			interfaz.escena.setTextura("GL_FLAT");
+		interfaz.escena.setVisualizacion(interfaz.escena.getVisualizacion() == "GL_SMOOTH" ? "GL_FLAT" : "GL_SMOOTH");
 		break;
 
 	case 'G':  //Apartado C: Cambiar la visualización.
-		if (interfaz.escena.getTextura() == "GL_FLAT")
-			interfaz.escena.setTextura("GL_SMOOTH");
-		else
-			interfaz.escena.setTextura("GL_FLAT");
+		interfaz.escena.setVisualizacion(interfaz.escena.getVisualizacion() == "GL_SMOOTH" ? "GL_FLAT" : "GL_SMOOTH");
 		break;
 
 	case 'e': // activa/desactiva la visualizacion de los ejes

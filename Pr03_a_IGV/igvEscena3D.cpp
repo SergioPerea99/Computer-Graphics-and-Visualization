@@ -73,9 +73,7 @@ void igvEscena3D::visualizar(void) {
 	glRotatef(get_rotZ(), 0, 0, 1); //MANEJO DE ROTACION SOBRE EJE Z.
 	
 	igvCilindro cilindro(1,1,40,2);
-	cilindro.visualizar(getTextura());
-
-	
+	cilindro.visualizar(getVisualizacion());
 
 	glPopMatrix(); // restaura la matriz de modelado
 }
@@ -104,10 +102,10 @@ float igvEscena3D::get_rotZ() const {
 	return rot_Z;
 }
 
-std::string igvEscena3D::getTextura() const {
-	return tipo_textura;
+std::string igvEscena3D::getVisualizacion() const {
+	return tipo_visualizacion;
 }
 
-void igvEscena3D::setTextura(std::string _textura) {
-	tipo_textura = _textura;
+void igvEscena3D::setVisualizacion(std::string _visual) {
+	tipo_visualizacion = _visual;
 }
