@@ -1,6 +1,4 @@
-﻿  igvInterfaz.cpp
+﻿  pr2b.cpp
 C:\Codigo\INFORMÁTICA GRÁFICA Y VISUALIZACIÓN\IGV_PR\pr02_b_IGV\igvPunto3D.h(26,2): warning C4091: 'typedef ': se ha omitido a la izquierda de '<unnamed-enum-X>' cuando no hay ninguna variable declarada
-  pr2b.cpp
-C:\Codigo\INFORMÁTICA GRÁFICA Y VISUALIZACIÓN\IGV_PR\pr02_b_IGV\igvPunto3D.h(26,2): warning C4091: 'typedef ': se ha omitido a la izquierda de '<unnamed-enum-X>' cuando no hay ninguna variable declarada
-  Generando código...
+  LINK : no se encontró C:\Codigo\INFORMÁTICA GRÁFICA Y VISUALIZACIÓN\IGV_PR\pr02_b_IGV\Debug\pr02_b_IGV.exe o no lo generó el último vínculo incremental; ejecutando vínculo completo
   pr02_b_IGV.vcxproj -> C:\Codigo\INFORMÁTICA GRÁFICA Y VISUALIZACIÓN\IGV_PR\pr02_b_IGV\Debug\pr02_b_IGV.exe
