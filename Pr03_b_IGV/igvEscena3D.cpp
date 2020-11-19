@@ -10,15 +10,16 @@ igvEscena3D::igvEscena3D() {
 
 	//Inicialización de los grados para la rotación de cada parte de la figura:
 	cuerpo = 0.0; //FUNCIONANDO ESTE PARAMETRO. MOVER EL CUERPO ALREDEDOR DEL EJE Y 360º.
-	cuello = -10.0; //FUNCIONANDO ESTE PARAMETRO. GIRAR HACIA DELANTE Y HACIA ATRÁS EN EL INTERVALO [-30,30].
-	cabeza = 30.0; //FUNCIONANDO ESTE PARAMETRO. GIRAR MAX DESDE -90 HASTA 90 GRADOS.
+	cuello = -20.0; //FUNCIONANDO ESTE PARAMETRO. GIRAR HACIA DELANTE Y HACIA ATRÁS EN EL INTERVALO [-30,30].
+	cabeza = -30.0; //FUNCIONANDO ESTE PARAMETRO. GIRAR MAX DESDE -90 HASTA 90 GRADOS.
 	hombroIzq = 0.0; //FUNCIONANDO ESTE PARAMETRO.
 	hombroDer = 0.0; //FUNCIONANDO ESTE PARAMETRO.
 
-	brazoSupDer = 30.0;
-	brazoSupIzq = 30.0;
-	brazoInfDer = 10.0;
+	brazoSupDer = 0.0;
+	brazoSupIzq = 0.0;
+	brazoInfDer = 50.0;
 	brazoInfIzq = 10.0;
+
 
 	piernaSupDer = 100.0; //LIMITAR A 30 Y 150
 	piernaSupIzq = 60.0; //LIMITAR A 30 Y 150
@@ -236,7 +237,7 @@ void igvEscena3D::bocaClank(float _x, float _y, float _z) {
 }
 
 
-/*BRAZOS DE CLANK*/
+/*MIEMBROS ARTICULADOS DE CLANK*/
 
 void igvEscena3D::hombroClank(float _x, float _y, float _z, double gradosRot, double gradosMov) {
 	float negro[3] = { 0,0,0 };
@@ -272,12 +273,21 @@ void igvEscena3D::piernaClank(float _x, float _y, float _z, double gradosMov)
 	cilindro = nullptr;
 }
 
+void igvEscena3D::manoClank(float _x, float _y, float _z, double gradosRot) {
+	float negro[3] = { 0,0,0 };
+	glMaterialfv(GL_FRONT, GL_EMISSION, negro);
+	glTranslatef(_x, _y, _z);
+	glRotatef(gradosRot, 1, 0, 0);
+	glScalef(0.1, 0.1, 0.1);
+	glutSolidSphere(1,40,20);
+
+	
+	
+}
 
 
 
 
-
-/*PIERNAS DE CLANK*/
 
 ////// Apartado C: añadir aquí los métodos para modificar los grados de libertad del modelo
 
@@ -321,6 +331,9 @@ void igvEscena3D::visualizar() {
 				brazoClank(0, 0, 0, 90, brazoSupDer); 
 				glPushMatrix();
 					brazoClank(0, 0, 0.4, 0, brazoInfDer);
+					glPushMatrix();
+						manoClank(0, 0, 0.4, 0);
+					glPopMatrix();
 				glPopMatrix();
 			glPopMatrix();
 		glPopMatrix();
@@ -331,6 +344,9 @@ void igvEscena3D::visualizar() {
 				brazoClank(0, 0, 0, 90,brazoSupIzq); 
 				glPushMatrix();
 					brazoClank(0, 0, 0.4, 0, brazoInfIzq);
+					glPushMatrix();
+						manoClank(0, 0, 0.5, 0);
+					glPopMatrix();
 				glPopMatrix();
 			glPopMatrix();
 		glPopMatrix();

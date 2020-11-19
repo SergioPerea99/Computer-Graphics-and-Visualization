@@ -45,6 +45,7 @@ public:
 	void hombroClank(float _x, float _y, float _z, double gradosRot, double gradosMov);
 	void brazoClank(float _x, float _y, float _z, double gradosRot, double gradosMov);
 	void piernaClank(float _x, float _y, float _z, double gradosMov);
+	void manoClank(float _x, float _y, float _z, double gradosRot);
 
 	void cuelloClank();
 	void cabezaClank();
