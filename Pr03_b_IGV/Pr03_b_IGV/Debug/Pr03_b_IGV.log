@@ -4,17 +4,23 @@ C:\Codigo\INFORMÁTICA GRÁFICA Y VISUALIZACIÓN\IGV_PR\Pr03_b_IGV\igvEscena3D.c
 C:\Codigo\INFORMÁTICA GRÁFICA Y VISUALIZACIÓN\IGV_PR\Pr03_b_IGV\igvEscena3D.cpp(94,29): warning C4305: 'argumento': truncamiento de 'double' a 'float'
 C:\Codigo\INFORMÁTICA GRÁFICA Y VISUALIZACIÓN\IGV_PR\Pr03_b_IGV\igvEscena3D.cpp(111,47): warning C4305: 'inicializando': truncamiento de 'double' a 'float'
 C:\Codigo\INFORMÁTICA GRÁFICA Y VISUALIZACIÓN\IGV_PR\Pr03_b_IGV\igvEscena3D.cpp(116,21): warning C4305: 'argumento': truncamiento de 'double' a 'GLfloat'
-C:\Codigo\INFORMÁTICA GRÁFICA Y VISUALIZACIÓN\IGV_PR\Pr03_b_IGV\igvEscena3D.cpp(119,28): warning C4305: 'argumento': truncamiento de 'double' a 'GLfloat'
-C:\Codigo\INFORMÁTICA GRÁFICA Y VISUALIZACIÓN\IGV_PR\Pr03_b_IGV\igvEscena3D.cpp(122,26): warning C4305: 'argumento': truncamiento de 'double' a 'GLfloat'
-C:\Codigo\INFORMÁTICA GRÁFICA Y VISUALIZACIÓN\IGV_PR\Pr03_b_IGV\igvEscena3D.cpp(128,26): warning C4305: 'argumento': truncamiento de 'double' a 'GLfloat'
-C:\Codigo\INFORMÁTICA GRÁFICA Y VISUALIZACIÓN\IGV_PR\Pr03_b_IGV\igvEscena3D.cpp(134,26): warning C4305: 'argumento': truncamiento de 'double' a 'GLfloat'
-C:\Codigo\INFORMÁTICA GRÁFICA Y VISUALIZACIÓN\IGV_PR\Pr03_b_IGV\igvEscena3D.cpp(166,38): warning C4305: 'inicializando': truncamiento de 'double' a 'float'
-C:\Codigo\INFORMÁTICA GRÁFICA Y VISUALIZACIÓN\IGV_PR\Pr03_b_IGV\igvEscena3D.cpp(175,24): warning C4305: 'argumento': truncamiento de 'double' a 'float'
-C:\Codigo\INFORMÁTICA GRÁFICA Y VISUALIZACIÓN\IGV_PR\Pr03_b_IGV\igvEscena3D.cpp(176,26): warning C4305: 'argumento': truncamiento de 'double' a 'float'
-C:\Codigo\INFORMÁTICA GRÁFICA Y VISUALIZACIÓN\IGV_PR\Pr03_b_IGV\igvEscena3D.cpp(180,25): warning C4305: 'argumento': truncamiento de 'double' a 'float'
-C:\Codigo\INFORMÁTICA GRÁFICA Y VISUALIZACIÓN\IGV_PR\Pr03_b_IGV\igvEscena3D.cpp(183,25): warning C4305: 'argumento': truncamiento de 'double' a 'float'
-C:\Codigo\INFORMÁTICA GRÁFICA Y VISUALIZACIÓN\IGV_PR\Pr03_b_IGV\igvEscena3D.cpp(240,37): warning C4305: 'inicializando': truncamiento de 'double' a 'float'
-C:\Codigo\INFORMÁTICA GRÁFICA Y VISUALIZACIÓN\IGV_PR\Pr03_b_IGV\igvEscena3D.cpp(244,27): warning C4305: 'argumento': truncamiento de 'double' a 'GLfloat'
-C:\Codigo\INFORMÁTICA GRÁFICA Y VISUALIZACIÓN\IGV_PR\Pr03_b_IGV\igvEscena3D.cpp(253,27): warning C4305: 'argumento': truncamiento de 'double' a 'GLfloat'
-C:\Codigo\INFORMÁTICA GRÁFICA Y VISUALIZACIÓN\IGV_PR\Pr03_b_IGV\igvEscena3D.cpp(262,27): warning C4305: 'argumento': truncamiento de 'double' a 'GLfloat'
+C:\Codigo\INFORMÁTICA GRÁFICA Y VISUALIZACIÓN\IGV_PR\Pr03_b_IGV\igvEscena3D.cpp(126,47): warning C4305: 'inicializando': truncamiento de 'double' a 'float'
+C:\Codigo\INFORMÁTICA GRÁFICA Y VISUALIZACIÓN\IGV_PR\Pr03_b_IGV\igvEscena3D.cpp(128,27): warning C4305: 'argumento': truncamiento de 'double' a 'GLfloat'
+C:\Codigo\INFORMÁTICA GRÁFICA Y VISUALIZACIÓN\IGV_PR\Pr03_b_IGV\igvEscena3D.cpp(131,24): warning C4305: 'argumento': truncamiento de 'double' a 'GLfloat'
+C:\Codigo\INFORMÁTICA GRÁFICA Y VISUALIZACIÓN\IGV_PR\Pr03_b_IGV\igvEscena3D.cpp(137,24): warning C4305: 'argumento': truncamiento de 'double' a 'GLfloat'
+C:\Codigo\INFORMÁTICA GRÁFICA Y VISUALIZACIÓN\IGV_PR\Pr03_b_IGV\igvEscena3D.cpp(143,24): warning C4305: 'argumento': truncamiento de 'double' a 'GLfloat'
+C:\Codigo\INFORMÁTICA GRÁFICA Y VISUALIZACIÓN\IGV_PR\Pr03_b_IGV\igvEscena3D.cpp(173,38): warning C4305: 'inicializando': truncamiento de 'double' a 'float'
+C:\Codigo\INFORMÁTICA GRÁFICA Y VISUALIZACIÓN\IGV_PR\Pr03_b_IGV\igvEscena3D.cpp(182,24): warning C4305: 'argumento': truncamiento de 'double' a 'float'
+C:\Codigo\INFORMÁTICA GRÁFICA Y VISUALIZACIÓN\IGV_PR\Pr03_b_IGV\igvEscena3D.cpp(183,26): warning C4305: 'argumento': truncamiento de 'double' a 'float'
+C:\Codigo\INFORMÁTICA GRÁFICA Y VISUALIZACIÓN\IGV_PR\Pr03_b_IGV\igvEscena3D.cpp(187,25): warning C4305: 'argumento': truncamiento de 'double' a 'float'
+C:\Codigo\INFORMÁTICA GRÁFICA Y VISUALIZACIÓN\IGV_PR\Pr03_b_IGV\igvEscena3D.cpp(190,25): warning C4305: 'argumento': truncamiento de 'double' a 'float'
+C:\Codigo\INFORMÁTICA GRÁFICA Y VISUALIZACIÓN\IGV_PR\Pr03_b_IGV\igvEscena3D.cpp(247,37): warning C4305: 'inicializando': truncamiento de 'double' a 'float'
+C:\Codigo\INFORMÁTICA GRÁFICA Y VISUALIZACIÓN\IGV_PR\Pr03_b_IGV\igvEscena3D.cpp(251,27): warning C4305: 'argumento': truncamiento de 'double' a 'GLfloat'
+C:\Codigo\INFORMÁTICA GRÁFICA Y VISUALIZACIÓN\IGV_PR\Pr03_b_IGV\igvEscena3D.cpp(260,27): warning C4305: 'argumento': truncamiento de 'double' a 'GLfloat'
+C:\Codigo\INFORMÁTICA GRÁFICA Y VISUALIZACIÓN\IGV_PR\Pr03_b_IGV\igvEscena3D.cpp(269,27): warning C4305: 'argumento': truncamiento de 'double' a 'GLfloat'
+  igvInterfaz.cpp
+C:\Codigo\INFORMÁTICA GRÁFICA Y VISUALIZACIÓN\IGV_PR\Pr03_b_IGV\igvPunto3D.h(25,2): warning C4091: 'typedef ': se ha omitido a la izquierda de '<unnamed-enum-X>' cuando no hay ninguna variable declarada
+  pr3b.cpp
+C:\Codigo\INFORMÁTICA GRÁFICA Y VISUALIZACIÓN\IGV_PR\Pr03_b_IGV\igvPunto3D.h(25,2): warning C4091: 'typedef ': se ha omitido a la izquierda de '<unnamed-enum-X>' cuando no hay ninguna variable declarada
+  Generando código...
   Pr03_b_IGV.vcxproj -> C:\Codigo\INFORMÁTICA GRÁFICA Y VISUALIZACIÓN\IGV_PR\Pr03_b_IGV\Debug\Pr03_b_IGV.exe

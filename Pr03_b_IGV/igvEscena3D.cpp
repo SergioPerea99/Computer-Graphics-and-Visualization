@@ -116,25 +116,32 @@ void igvEscena3D::cuerpoClank() {
 		glScalef(1, 1.2, 1);
 		glutSolidCube(1);
 
-		glTranslatef(0, -0.1, 0.5);
-		glPushMatrix();
-			glMaterialfv(GL_FRONT, GL_EMISSION, negro);
-			glScalef(0.7, 0.6, 0.2);
-			glutSolidCube(1);
-		glPopMatrix();
+		barrigaClank();
+	glPopMatrix();
+}
 
-		glPushMatrix();
-			glMaterialfv(GL_FRONT, GL_EMISSION, blanco);
-			glScalef(0.6, 0.5, 0.3);
-			glutSolidCube(1);
-		glPopMatrix();
+void igvEscena3D::barrigaClank()
+{
+	float negro[3] = { 0, 0, 0 }; //Porcentaje de grises a usar. 
+	float gris1[3] = { 1 * 0.4, 1 * 0.4, 1 * 0.4 };
 
-		glPushMatrix();
-			glMaterialfv(GL_FRONT, GL_EMISSION, negro);
-			glScalef(0.5, 0.4, 0.4);
-			glutSolidCube(1);
-		glPopMatrix();
-		
+	glTranslatef(0, -0.1, 0.5);
+	glPushMatrix();
+	glMaterialfv(GL_FRONT, GL_EMISSION, negro);
+	glScalef(0.7, 0.6, 0.2);
+	glutSolidCube(1);
+	glPopMatrix();
+
+	glPushMatrix();
+	glMaterialfv(GL_FRONT, GL_EMISSION, gris1);
+	glScalef(0.6, 0.5, 0.3);
+	glutSolidCube(1);
+	glPopMatrix();
+
+	glPushMatrix();
+	glMaterialfv(GL_FRONT, GL_EMISSION, negro);
+	glScalef(0.5, 0.4, 0.4);
+	glutSolidCube(1);
 	glPopMatrix();
 }
 
@@ -237,7 +244,7 @@ void igvEscena3D::antenaClank(float _x, float _y, float _z)
 }
 
 void igvEscena3D::bocaClank(float _x, float _y, float _z) {
-	float rosado[3] = { 0.2, 0.05, 0.0 };
+	float rosado[3] = { 0.1, 0.05, 0.0 };
 	glPushMatrix();
 		glMaterialfv(GL_FRONT, GL_EMISSION, rosado);
 		glTranslated(_x, _y,_z);

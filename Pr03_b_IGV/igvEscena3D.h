@@ -39,12 +39,14 @@ public:
 
 	///// Apartado B: Métodos para visualizar cada parte del modelo
 	void cuerpoClank();
+	void barrigaClank();
 	void cuelloClank();
 	void cabezaClank();
 	void orejaClank(float _x,float _y, float _z);
 	void ojoClank(float _x, float _y, float _z);
 	void antenaClank(float _x, float _y, float _z);
 	void bocaClank(float _x, float _y, float _z);
+
 	////// Apartado C: añadir aquí los métodos para modificar los grados de libertad del modelo
 
 
