@@ -21,7 +21,9 @@ class igvEscena3D {
 protected:
 
 	//ATRIBUTOS para cambiar el grado de rotación correspondiente.
-	float cuerpo, cuello, cabeza, hombroIzq, hombroDer,antena;
+	float cuerpo, cuello, cabeza, hombroIzq, hombroDer; //TORSO Y PARTE SUPERIOR.
+	float brazoSupIzq, brazoSupDer, brazoInfIzq, brazoInfDer; //BRAZOS.
+	float piernaSupDer, piernaSupIzq, piernaInfDer, piernaInfIzq; //PIERNAS.
 
 	////// Apartado C: añadir quí los atributos para el control de los grados de libertad del modelo
 
@@ -40,10 +42,14 @@ public:
 	///// Apartado B: Métodos para visualizar cada parte del modelo
 	void cuerpoClank();
 	void barrigaClank();
+	void hombroClank(float _x, float _y, float _z, double gradosRot, double gradosMov);
+	void brazoClank(float _x, float _y, float _z, double gradosRot, double gradosMov);
+	void piernaClank(float _x, float _y, float _z, double gradosMov);
+
 	void cuelloClank();
 	void cabezaClank();
 	void orejaClank(float _x,float _y, float _z);
-	void ojoClank(float _x, float _y, float _z);
+	void ojoClank(float _x, float _y, float _z, double gradoContorno);
 	void antenaClank(float _x, float _y, float _z);
 	void bocaClank(float _x, float _y, float _z);
 
