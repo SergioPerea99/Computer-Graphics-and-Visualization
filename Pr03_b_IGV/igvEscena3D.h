@@ -44,6 +44,7 @@ public:
 	void brazoClank(float _x, float _y, float _z, double gradosRot, double gradosMov);
 	void piernaClank(float _x, float _y, float _z, double gradosMov);
 	void manoClank(float _x, float _y, float _z, double gradosRot);
+	void pieClank(float _x, float _y, float _z);
 
 	void cuelloClank();
 	void cabezaClank();

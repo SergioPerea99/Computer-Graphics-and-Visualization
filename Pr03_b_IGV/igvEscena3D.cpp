@@ -12,8 +12,8 @@ igvEscena3D::igvEscena3D() {
 
 	/*NO CAMBIAR LOS VALORES DEL CONSTRUCTOR PARA QUE TENGA SENTIDO LAS MODIFICACIONES DE LOS VALORES EN LAS TECLAS.*/
 	cuerpo = 0.0; //FUNCIONANDO ESTE PARAMETRO. MOVER EL CUERPO ALREDEDOR DEL EJE Y 360º.
-	cuello = -20.0; //FUNCIONANDO ESTE PARAMETRO. GIRAR HACIA DELANTE Y HACIA ATRÁS EN EL INTERVALO [-30,30].
-	cabeza = -30.0; //FUNCIONANDO ESTE PARAMETRO. GIRAR MAX DESDE -90 HASTA 90 GRADOS.
+	cuello = 0.0; //FUNCIONANDO ESTE PARAMETRO. GIRAR HACIA DELANTE Y HACIA ATRÁS EN EL INTERVALO [-30,30].
+	cabeza = 0.0; //FUNCIONANDO ESTE PARAMETRO. GIRAR MAX DESDE -90 HASTA 90 GRADOS.
 	hombroIzq = 0.0; //FUNCIONANDO ESTE PARAMETRO.
 	hombroDer = 0.0; //FUNCIONANDO ESTE PARAMETRO.
 
@@ -282,9 +282,14 @@ void igvEscena3D::manoClank(float _x, float _y, float _z, double gradosRot) {
 	glRotatef(gradosRot, 1, 0, 0);
 	glScalef(0.1, 0.1, 0.1);
 	glutSolidSphere(1,40,20);
+}
 
-	
-	
+void igvEscena3D::pieClank(float _x, float _y, float _z) {
+	float negro[3] = { 0,0,0 };
+	glMaterialfv(GL_FRONT, GL_EMISSION, negro);
+	glTranslatef(_x, _y, _z);
+	glScalef(0.1, 0.4, 0.1);
+	glutSolidCube(1);
 }
 
 
@@ -421,14 +426,20 @@ void igvEscena3D::visualizar() {
 		glPushMatrix(); /*---> CONTROL DE LA PIERNA DERECHA*/
 			piernaClank(-0.4, -0.5, 0, piernaSupDer); //TODO: AÑADIR PARAMETRO
 			glPushMatrix();
-				piernaClank(0, 0, 0.3,piernaInfDer);
+				piernaClank(0, 0, 0.4,piernaInfDer);
+				glPushMatrix();
+					pieClank(0, 0.16, 0.35);
+				glPopMatrix();
 			glPopMatrix();
 		glPopMatrix();
 
 		glPushMatrix(); /*---> CONTROL DE LA PIERNA IZQUIERDA*/
 			piernaClank(0.4, -0.5, 0,piernaSupIzq); //TODO: AÑADIR PARAMETRO
 			glPushMatrix();
-				piernaClank(0, 0, 0.3, piernaInfIzq);
+				piernaClank(0, 0, 0.4, piernaInfIzq);
+				glPushMatrix();
+					pieClank(0, 0.16, 0.35);
+				glPopMatrix();
 			glPopMatrix();
 		glPopMatrix();
 
