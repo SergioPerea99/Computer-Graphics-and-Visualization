@@ -28,6 +28,7 @@ protected:
 	//Atributo extra para el control de la visualización.
 	int visualizacion; //Añadido aquí para evitar tener que cambiar mucho el código base de la cámara.
 	int divisiones;
+	
 
 public:
 	// Constructores por defecto y destructor

@@ -76,7 +76,7 @@ void igvInterfaz::set_glutKeyboardFunc(unsigned char key, int x, int y) {
 		break;
 		////// Apartado C: incluir aquí la modificación de los grados de libertad del modelo pulsando las teclas correspondientes
 
-	case 'ñ': // activa/desactiva la visualizacion de los ejes
+	case 'e': // activa/desactiva la visualizacion de los ejes
 		interfaz.escena.set_ejes(interfaz.escena.get_ejes() ? false : true);
 		break;
 	
@@ -103,16 +103,16 @@ void igvInterfaz::set_glutKeyboardFunc(unsigned char key, int x, int y) {
 	case 'Z': //HOMBRO DERECHO HACIA ATRÁS.
 		interfaz.escena.setMovHombroDer(-5);
 		break;
-	case 'a': //BRAZO SUPERIOR DERECHO HACIA DELANTE.
+	case 'd': //BRAZO SUPERIOR DERECHO HACIA DELANTE.
 		interfaz.escena.setMovBrazoSupDer(5);
 		break;
-	case 'A': //BRAZO SUPERIOR DERECHO HACIA ATRÁS.
+	case 'D': //BRAZO SUPERIOR DERECHO HACIA ATRÁS.
 		interfaz.escena.setMovBrazoSupDer(-5);
 		break;
-	case 'q': //BRAZO SUPERIOR IZQUIERDO HACIA DELANTE.
+	case 'r': //BRAZO SUPERIOR IZQUIERDO HACIA DELANTE.
 		interfaz.escena.setMovBrazoSupIzq(5);
 		break;
-	case 'Q': //BRAZO SUPERIOR IZQUIERDO HACIA ATRÁS.
+	case 'R': //BRAZO SUPERIOR IZQUIERDO HACIA ATRÁS.
 		interfaz.escena.setMovBrazoSupIzq(-5);
 		break;
 	case 'w': //BRAZO INFERIOR DERECHO HACIA DELANTE.
@@ -121,10 +121,10 @@ void igvInterfaz::set_glutKeyboardFunc(unsigned char key, int x, int y) {
 	case 'W': //BRAZO INFERIOR DERECHO HACIA ATRÁS.
 		interfaz.escena.setMovBrazoInfDer(-5);
 		break;
-	case 'e': //BRAZO INFERIOR IZQUIERDO HACIA DELANTE.
+	case 'q': //BRAZO INFERIOR IZQUIERDO HACIA DELANTE.
 		interfaz.escena.setMovBrazoInfIzq(5);
 		break;
-	case 'E': //BRAZO INFERIOR IZQUIERDO HACIA ATRÁS.
+	case 'Q': //BRAZO INFERIOR IZQUIERDO HACIA ATRÁS.
 		interfaz.escena.setMovBrazoInfIzq(-5);
 		break;
 
@@ -168,6 +168,13 @@ void igvInterfaz::set_glutKeyboardFunc(unsigned char key, int x, int y) {
 		interfaz.escena.setMovCabeza(-5);
 		break;
 
+	/*ACTIVAR/DESACTIVAR ANIMACION*/
+	case 'a':
+		if (interfaz.escena.get_animacion())
+			interfaz.escena.set_animacion(false);
+		else
+			interfaz.escena.set_animacion(true);
+		break;
 	case 27: // tecla de escape para SALIR
 		exit(1);
 		break;
@@ -201,8 +208,44 @@ void igvInterfaz::set_glutDisplayFunc() {
 
 void igvInterfaz::set_glutIdleFunc() {
 	///// Apartado D: incluir el código para animar el modelo de la manera más realista posible
+	if (interfaz.escena.get_animacion()) {
+		if (interfaz.escena.get_limitIntervalo()) {
+			interfaz.escena.set_actualValor(interfaz.escena.get_actualValor() + 0.5);
 
+			interfaz.escena.setMovBrazoSupDer(0.3);
+			interfaz.escena.setMovBrazoSupIzq(0.3);
+			interfaz.escena.setMovBrazoInfDer(0.1);
+			interfaz.escena.setMovBrazoInfIzq(0.1);
 
+			interfaz.escena.setMovCuello(0.04);
+
+			interfaz.escena.setMovPiernaSupDer(0.3);
+			interfaz.escena.setMovPiernaSupIzq(-0.3);
+			interfaz.escena.setMovPiernaInfDer(0.1);
+			interfaz.escena.setMovPiernaInfIzq(-0.1);
+
+		}
+		else {
+			interfaz.escena.set_actualValor(interfaz.escena.get_actualValor() - 0.5);
+			interfaz.escena.setMovBrazoSupDer(-0.3);
+			interfaz.escena.setMovBrazoSupIzq(-0.3);
+			interfaz.escena.setMovBrazoInfDer(-0.1);
+			interfaz.escena.setMovBrazoInfIzq(-0.1);
+
+			interfaz.escena.setMovCuello(-0.045);
+
+			interfaz.escena.setMovPiernaSupDer(-0.3);
+			interfaz.escena.setMovPiernaSupIzq(0.3);
+			interfaz.escena.setMovPiernaInfDer(-0.1);
+			interfaz.escena.setMovPiernaInfIzq(0.1);
+		}
+		if (interfaz.escena.get_actualValor() >= 300)
+			interfaz.escena.set_limitIntervalo(false);
+		else if (interfaz.escena.get_actualValor() <= 0)
+			interfaz.escena.set_limitIntervalo(true);
+
+		glutPostRedisplay(); //PARA REFRESCAR LA ESCENA Y QUE SALGA LA ANIMACIÓN CON SU NUEVOS PARAMETROS CAMBIADOS.
+	}
 }
 
 void igvInterfaz::inicializa_callbacks() {
