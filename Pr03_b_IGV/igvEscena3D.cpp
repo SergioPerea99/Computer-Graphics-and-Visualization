@@ -7,6 +7,9 @@
 
 igvEscena3D::igvEscena3D() {
 	ejes = true;
+	animacion = false;
+	limitIntervalo = true;
+	actualValor = 0.0;
 
 	// Apartado C: inicializar los atributos para el control de los grados de libertad del modelo
 
@@ -361,6 +364,36 @@ void igvEscena3D::setMovPiernaInfDer(float n)
 void igvEscena3D::setMovPiernaInfIzq(float n)
 {
 	if (piernaInfIzq + n >= 0 && piernaInfIzq + n <= 90) piernaInfIzq += n;
+}
+
+bool igvEscena3D::get_animacion()
+{
+	return animacion;
+}
+
+void igvEscena3D::set_animacion(bool _animacion)
+{
+	animacion = _animacion;
+}
+
+bool igvEscena3D::get_limitIntervalo()
+{
+	return limitIntervalo;
+}
+
+void igvEscena3D::set_limitIntervalo(bool _cambia)
+{
+	limitIntervalo = _cambia;
+}
+
+float igvEscena3D::get_actualValor()
+{
+	return actualValor;
+}
+
+void igvEscena3D::set_actualValor(float _nuevo)
+{
+	actualValor = _nuevo;
 }
 
 

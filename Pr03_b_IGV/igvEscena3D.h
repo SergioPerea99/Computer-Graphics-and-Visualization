@@ -27,7 +27,9 @@ protected:
 
 	// Otros atributos		
 	bool ejes;
-
+	bool animacion;
+	bool limitIntervalo;
+	float actualValor;
 public:
 
 	// Constructores por defecto y destructor
@@ -73,6 +75,15 @@ public:
 
 	bool get_ejes() { return ejes; };
 	void set_ejes(bool _ejes) { ejes = _ejes; };
+
+	bool get_animacion();
+	void set_animacion(bool _animacion);
+
+	bool get_limitIntervalo();
+	void set_limitIntervalo(bool _cambia);
+
+	float get_actualValor();
+	void set_actualValor(float _nuevo);
 
 };
 
