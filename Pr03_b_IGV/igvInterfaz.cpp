@@ -76,10 +76,98 @@ void igvInterfaz::set_glutKeyboardFunc(unsigned char key, int x, int y) {
 		break;
 		////// Apartado C: incluir aquí la modificación de los grados de libertad del modelo pulsando las teclas correspondientes
 
-	case 'e': // activa/desactiva la visualizacion de los ejes
+	case 'ñ': // activa/desactiva la visualizacion de los ejes
 		interfaz.escena.set_ejes(interfaz.escena.get_ejes() ? false : true);
 		break;
 	
+	//TECLAS PARA MANEJAR AL OBJETO. LAS TECLAS HAN SIDO ASIGNADAS SEGÚN EL NOMBRE DE LA PARTE DEL CUERPO EN INGLÉS.
+
+	/*TORSO DE CLANK*/
+	case 'b': //CUERPO GIRANDO HACIA LA IZQ DE CLANK
+		interfaz.escena.setMovCuerpo(5);
+		break;
+	case 'B': //CUERPO GIRANDO HACIA LA DER DE CLANK
+		interfaz.escena.setMovCuerpo(-5);
+		break;
+	
+	/*BRAZOS DE CLANK*/
+	case 's': //HOMBRO IZQUIERDO HACIA DELANTE.
+		interfaz.escena.setMovHombroIzq(5);
+		break;
+	case 'S': //HOMBRO IZQUIERDO HACIA ATRÁS.
+		interfaz.escena.setMovHombroIzq(-5);
+		break;
+	case 'z': //HOMBRO DERECHO HACIA DELANTE.
+		interfaz.escena.setMovHombroDer(5);
+		break;
+	case 'Z': //HOMBRO DERECHO HACIA ATRÁS.
+		interfaz.escena.setMovHombroDer(-5);
+		break;
+	case 'a': //BRAZO SUPERIOR DERECHO HACIA DELANTE.
+		interfaz.escena.setMovBrazoSupDer(5);
+		break;
+	case 'A': //BRAZO SUPERIOR DERECHO HACIA ATRÁS.
+		interfaz.escena.setMovBrazoSupDer(-5);
+		break;
+	case 'q': //BRAZO SUPERIOR IZQUIERDO HACIA DELANTE.
+		interfaz.escena.setMovBrazoSupIzq(5);
+		break;
+	case 'Q': //BRAZO SUPERIOR IZQUIERDO HACIA ATRÁS.
+		interfaz.escena.setMovBrazoSupIzq(-5);
+		break;
+	case 'w': //BRAZO INFERIOR DERECHO HACIA DELANTE.
+		interfaz.escena.setMovBrazoInfDer(5);
+		break;
+	case 'W': //BRAZO INFERIOR DERECHO HACIA ATRÁS.
+		interfaz.escena.setMovBrazoInfDer(-5);
+		break;
+	case 'e': //BRAZO INFERIOR IZQUIERDO HACIA DELANTE.
+		interfaz.escena.setMovBrazoInfIzq(5);
+		break;
+	case 'E': //BRAZO INFERIOR IZQUIERDO HACIA ATRÁS.
+		interfaz.escena.setMovBrazoInfIzq(-5);
+		break;
+
+	/*PIERNAS DE CLANK*/
+	case 'p': //PIERNA SUPERIOR DERECHA HACIA DELANTE.
+		interfaz.escena.setMovPiernaSupDer(5);
+		break;
+	case 'P': //PIERNA SUPERIOR DERECHA HACIA ATRÁS.
+		interfaz.escena.setMovPiernaSupDer(-5);
+		break;
+	case 'l': //PIERNA SUPERIOR IZQUIERDA HACIA DELANTE.
+		interfaz.escena.setMovPiernaSupIzq(5);
+		break;
+	case 'L': //BRAZO SUPERIOR IZQUIERDA HACIA ATRÁS.
+		interfaz.escena.setMovPiernaSupIzq(-5);
+		break;
+	case 'o': //PIERNA INFERIOR DERECHA HACIA DELANTE.
+		interfaz.escena.setMovPiernaInfDer(5);
+		break;
+	case 'O': //PIERNA INFERIOR DERECHA HACIA ATRÁS.
+		interfaz.escena.setMovPiernaInfDer(-5);
+		break;
+	case 'k': //PIERNA INFERIOR IZQUIERDA HACIA DELANTE.
+		interfaz.escena.setMovPiernaInfIzq(5);
+		break;
+	case 'K': //PIERNA INFERIOR IZQUIERDA HACIA ATRÁS.
+		interfaz.escena.setMovPiernaInfIzq(-5);
+		break;
+
+	/*PARTE SUPERIOR DE CLANK*/
+	case 'n': //CUELLO HACIA DELANTE.
+		interfaz.escena.setMovCuello(5);
+		break;
+	case 'N': //CUELLO HACIA ATRÁS.
+		interfaz.escena.setMovCuello(-5);
+		break;
+	case 'h': //CABEZA HACIA LA IZQUIERDA DE CLANK.
+		interfaz.escena.setMovCabeza(5);
+		break;
+	case 'H':
+		interfaz.escena.setMovCabeza(-5);
+		break;
+
 	case 27: // tecla de escape para SALIR
 		exit(1);
 		break;

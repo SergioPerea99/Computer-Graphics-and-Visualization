@@ -19,13 +19,11 @@ enum {
 
 class igvEscena3D {
 protected:
+	////// Apartado C: añadir quí los atributos para el control de los grados de libertad del modelo
 
-	//ATRIBUTOS para cambiar el grado de rotación correspondiente.
 	float cuerpo, cuello, cabeza, hombroIzq, hombroDer; //TORSO Y PARTE SUPERIOR.
 	float brazoSupIzq, brazoSupDer, brazoInfIzq, brazoInfDer; //BRAZOS.
 	float piernaSupDer, piernaSupIzq, piernaInfDer, piernaInfIzq; //PIERNAS.
-
-	////// Apartado C: añadir quí los atributos para el control de los grados de libertad del modelo
 
 	// Otros atributos		
 	bool ejes;
@@ -55,6 +53,21 @@ public:
 	void bocaClank(float _x, float _y, float _z);
 
 	////// Apartado C: añadir aquí los métodos para modificar los grados de libertad del modelo
+	void setMovCuerpo(float n);
+	void setMovCuello(float n);
+	void setMovCabeza(float n);
+	void setMovHombroIzq(float n);
+	void setMovHombroDer(float n);
+	void setMovBrazoSupDer(float n);
+	void setMovBrazoSupIzq(float n);
+	void setMovBrazoInfDer(float n);
+	void setMovBrazoInfIzq(float n);
+	void setMovPiernaSupDer(float n);
+	void setMovPiernaSupIzq(float n);
+	void setMovPiernaInfDer(float n);
+	void setMovPiernaInfIzq(float n);
+
+
 
 
 	bool get_ejes() { return ejes; };

@@ -8,7 +8,9 @@
 igvEscena3D::igvEscena3D() {
 	ejes = true;
 
-	//Inicialización de los grados para la rotación de cada parte de la figura:
+	// Apartado C: inicializar los atributos para el control de los grados de libertad del modelo
+
+	/*NO CAMBIAR LOS VALORES DEL CONSTRUCTOR PARA QUE TENGA SENTIDO LAS MODIFICACIONES DE LOS VALORES EN LAS TECLAS.*/
 	cuerpo = 0.0; //FUNCIONANDO ESTE PARAMETRO. MOVER EL CUERPO ALREDEDOR DEL EJE Y 360º.
 	cuello = -20.0; //FUNCIONANDO ESTE PARAMETRO. GIRAR HACIA DELANTE Y HACIA ATRÁS EN EL INTERVALO [-30,30].
 	cabeza = -30.0; //FUNCIONANDO ESTE PARAMETRO. GIRAR MAX DESDE -90 HASTA 90 GRADOS.
@@ -17,16 +19,16 @@ igvEscena3D::igvEscena3D() {
 
 	brazoSupDer = 0.0;
 	brazoSupIzq = 0.0;
-	brazoInfDer = 50.0;
-	brazoInfIzq = 10.0;
+	brazoInfDer = 0.0;
+	brazoInfIzq = 0.0;
 
 
-	piernaSupDer = 100.0; //LIMITAR A 30 Y 150
-	piernaSupIzq = 60.0; //LIMITAR A 30 Y 150
-	piernaInfDer = 20.0;
-	piernaInfIzq = 20.0;
+	piernaSupDer = 90.0; //LIMITAR A 30 Y 150. 
+	piernaSupIzq = 90.0; //LIMITAR A 30 Y 150
+	piernaInfDer = 0.0;
+	piernaInfIzq = 0.0;
 
-	// Apartado C: inicializar los atributos para el control de los grados de libertad del modelo 
+	 
 
 }
 
@@ -290,6 +292,71 @@ void igvEscena3D::manoClank(float _x, float _y, float _z, double gradosRot) {
 
 
 ////// Apartado C: añadir aquí los métodos para modificar los grados de libertad del modelo
+
+void igvEscena3D::setMovCuerpo(float n)
+{
+	cuerpo =((int)(cuerpo + n) % 360);
+}
+
+void igvEscena3D::setMovCuello(float n)
+{
+	if(cuello+n >= -30 && cuello+n <= 30 ) cuello += n;
+}
+
+void igvEscena3D::setMovCabeza(float n)
+{
+	if (cabeza + n >= -90 && cabeza + n <= 90) cabeza += n;
+}
+
+void igvEscena3D::setMovHombroIzq(float n)
+{
+	/*if (hombroIzq + n >= -180 && hombroIzq + n <= 180)*/ hombroIzq = ((int)(hombroIzq + n)%360);
+}
+
+void igvEscena3D::setMovHombroDer(float n)
+{
+	/*if (hombroDer + n >= -180 && hombroDer + n <= 180)*/ hombroDer = ((int)(hombroDer + n) % 360);
+}
+
+void igvEscena3D::setMovBrazoSupDer(float n) //COMPROBADO QUE DEBE SER ASÍ. SIEMPRE Y CUANDO DIGAMOS QUE EL BRAZO LO PUEDES GIRAR 360º GRACIAS AL HOMBRO Y NO AL BRAZO SUPERIOR.
+{
+	if (brazoSupDer + n >= -60 && brazoSupDer + n <= 90) brazoSupDer += n;
+}
+
+void igvEscena3D::setMovBrazoSupIzq(float n) //COMPROBADO QUE DEBE SER ASÍ.  SIEMPRE Y CUANDO DIGAMOS QUE EL BRAZO LO PUEDES GIRAR 360º GRACIAS AL HOMBRO Y NO AL BRAZO SUPERIOR.
+{
+	if (brazoSupIzq + n >= -90 && brazoSupIzq + n <= 60) brazoSupIzq += n;
+}
+
+void igvEscena3D::setMovBrazoInfDer(float n) //COMPROBADO QUE DEBE SER ASÍ
+{
+	if (brazoInfDer + n >= 0 && brazoInfDer + n <= 90)  brazoInfDer += n;
+}
+
+void igvEscena3D::setMovBrazoInfIzq(float n) //COMPROBADO QUE DEBE SER ASÍ
+{
+	if (brazoInfIzq + n >= -90 && brazoInfIzq + n <= 0) brazoInfIzq += n;
+}
+
+void igvEscena3D::setMovPiernaSupDer(float n)
+{
+	if (piernaSupDer + n >= 30 && piernaSupDer + n <= 150) piernaSupDer += n;
+}
+
+void igvEscena3D::setMovPiernaSupIzq(float n)
+{
+	if (piernaSupIzq + n >= 30 && piernaSupIzq + n <= 150) piernaSupIzq += n;
+}
+
+void igvEscena3D::setMovPiernaInfDer(float n)
+{
+	if (piernaInfDer + n >= 0 && piernaInfDer + n <= 90) piernaInfDer += n;
+}
+
+void igvEscena3D::setMovPiernaInfIzq(float n)
+{
+	if (piernaInfIzq + n >= 0 && piernaInfIzq + n <= 90) piernaInfIzq += n;
+}
 
 
 void igvEscena3D::visualizar() {
